@@ -58,8 +58,8 @@ spec:
         steps {
             sh 'docker push killivinay69/python'
            }
-    }stage("install helm"){
-
+    }
+    stage("install helm"){
         steps {
             sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'
             sh 'tar -xvzf helm-v3.6.1-linux-amd64.tar.gz'
