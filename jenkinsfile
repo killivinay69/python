@@ -70,6 +70,7 @@ spec:
     stage('helm') {
         steps {
             sh 'helm upgrade --install python69 python6'
+            sh 'helm repo update python69'
         }
       }
      }
