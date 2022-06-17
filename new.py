@@ -4,7 +4,7 @@ import time
 mail = sendgrid.SendGridAPIClient('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')
 
 esconnector = Elasticsearch(
-  "http://10.101.60.86:32315/")
+  "http://10.97.252.29:31102/")
 
    
 message = sendgrid.Mail(
