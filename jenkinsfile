@@ -59,12 +59,18 @@ spec:
             sh 'docker push killivinay69/python'
            }
     }
-    stage("install helm"){
+    stage('Deploy') {
         steps {
-            sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'
-            sh 'tar -xvzf helm-v3.6.1-linux-amd64.tar.gz'
-            sh 'cp linux-amd64/helm /usr/bin'
-            sh 'helm version'
+             sh 'kubectl apply -f deployment.yaml'
+             sh 'kubectl apply -f service.yaml'
+        }
+       }
+         stage("install helm"){
+             steps {
+                   sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'
+                   sh 'tar -xvzf helm-v3.6.1-linux-amd64.tar.gz'
+                   sh 'cp linux-amd64/helm /usr/bin'
+                   sh 'helm version'
 }
 }    
     stage('helm') {
