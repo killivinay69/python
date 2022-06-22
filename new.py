@@ -1,7 +1,7 @@
 import sendgrid
 from elasticsearch import Elasticsearch
 import time
-mail = sendgrid.SendGridAPIClient('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')
+mail = sendgrid.SendGridAPIClient('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')
 
 esconnector = Elasticsearch(
   "http://10.97.252.29:31102/")
