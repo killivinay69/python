@@ -1,14 +1,14 @@
 import sendgrid
 from elasticsearch import Elasticsearch
 import time
-mail = sendgrid.SendGridAPIClient('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')
+mail = sendgrid.SendGridAPIClient('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')
 
 esconnector = Elasticsearch(
   "http://10.97.252.29:31102/")
 
    
 message = sendgrid.Mail(
-                from_email='harinath.kavuri@perigorddata.com',
+                from_email='harinath.kavuri@gmail.com',
                 to_emails='anandsadhu@perigorddata.com',
                 subject='PM Elastic DB Down',
                 html_content='<strong>Elastic DB Down</strong>')
